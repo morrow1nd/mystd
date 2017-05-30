@@ -513,6 +513,15 @@ template<typename... T> using common_type_t = typename common_type<T...>::type;
 using std::underlying_type;
 template<typename T> using underlying_type_t = typename underlying_type<T>::type;
 
+/**
+ *  Utility metafunction that maps a sequence of any types to the type void.
+ *  This metafunction is used in template metaprogramming to detect ill-formed types in SFINAE context.
+ *  It can also be used to detect validity of an expression.
+ *  see more http://en.cppreference.com/w/cpp/types/void_t
+*/
+template<typename...>
+using void_t = void;
+
 // operations on traits
 
 

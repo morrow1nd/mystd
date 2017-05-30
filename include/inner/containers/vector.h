@@ -1,7 +1,7 @@
 #pragma once
 
-#include "mystd.h"
-#include "memory/allocators.h"
+#include "../mystd.h"
+#include "../memory/allocators.h"
 
 #include <initializer_list> // std::initializer_list is special to the compiler, we can't achieve it in namespace mystd. see doc/initializer_list_more.md
 #include <cstddef> // size_t, ptrdiff_t
