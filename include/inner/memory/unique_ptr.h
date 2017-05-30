@@ -116,10 +116,10 @@ public:
         return *this;
     }
 
-    /*
-    ** Assign by move rhs
-    ** Only if T2 is not an array type and unique_ptr<T2,D2>::pointer is implicitly convertible to
-    ** pointer and std::is_assignable<Deleter&, D2&&>::value is true. (Copied from cppreference.com)
+    /**
+     * Assign by move rhs
+     * Only if T2 is not an array type and unique_ptr<T2,D2>::pointer is implicitly convertible to
+     * pointer and std::is_assignable<Deleter&, D2&&>::value is true. (Copied from cppreference.com)
     */
     template<typename T2, typename D2>
     enable_if_t<!is_array_v<T2>

@@ -1,10 +1,9 @@
 # mystd
 
- **mystd** achieves the c++ standard library in clean code.
+ Achieves the c++ standard library in clean code.
 
- [document]() ([chinese]())
-
- *progress chart*:
+<br>
+ progress chart:
 
  + [ ] Utilities library
     - [ ] [Type support](doc/type_support.md)
