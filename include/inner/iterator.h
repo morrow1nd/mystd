@@ -2,7 +2,7 @@
 
 #include "mystd.h"
 #include <cstddef> // ptrdiff_t
-
+#include <iterator> // istream_iterator, ostream_iterator, istreambuf_iterator, ostreambuf_iterator
 
 MYSTD_NS_BEGIN
 
@@ -80,6 +80,36 @@ template<typename Iter>
 using iterator_category_t = typename iterator_traits<Iter>::iterator_category;
 
 
+using std::reverse_iterator; // todo
+using std::move_iterator;
+using std::back_insert_iterator;
+using std::front_insert_iterator;
+using std::insert_iterator;
+
+using std::make_reverse_iterator;
+using std::make_move_iterator;
+using std::font_inserter;
+using std::back_inserter;
+using std::inserter;
+
+
+using std::istream_iterator;
+using std::ostream_iterator;
+using std::istreambuf_iterator;
+using std::ostreambuf_iterator;
+
+using std::beign;
+using std::cbegin;
+using std::end;
+using std::cend;
+using std::rbegin;
+using std::crbegin;
+using std::rend;
+using std::crend;
+
+// todo: operator == != <= ...
+
+
 template<typename InputIt, typename Diff>
 inline void advance(InputIt& it, Diff offset, input_iterator_tag)
 {
@@ -152,5 +182,6 @@ inline BidIt prev(BidIt first, iterator_diff_t<BidIt> offset = 1)
     advance(first, -offset);
     return first;
 }
+
 
 MYSTD_NS_END
